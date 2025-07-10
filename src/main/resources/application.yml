@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  application.name: hhplus-tdd
+
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
