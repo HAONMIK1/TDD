@@ -33,7 +33,7 @@ public class UserPoint {
     }
 
     public UserPoint use(long amount) {
-        if (amount <= PointPolicy.MIN_USE_POINT) throw new IllegalArgumentException(PointPolicy.ERROR_MIN_USE);
+        if (amount < PointPolicy.MIN_USE_POINT) throw new IllegalArgumentException(PointPolicy.ERROR_MIN_USE);
         if (this.point < amount)
             throw new IllegalStateException(PointPolicy.ERROR_BALANCE);
         return new UserPoint(id, point - amount, System.currentTimeMillis());
