@@ -49,4 +49,6 @@ class PointServiceIntegrationTesti {
         assertEquals(TransactionType.USE, histories.get(4).type());
         assertEquals(1500L, histories.get(4).amount());
     }
+
+
 }

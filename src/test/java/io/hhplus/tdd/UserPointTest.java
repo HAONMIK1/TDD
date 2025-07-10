@@ -15,18 +15,6 @@ import static org.mockito.Mockito.*;
 
 public class UserPointTest {
 
-    private UserPointTable userPointTable;
-
-    private PointHistoryTable pointHistoryTable;
-
-    private PointService pointService;
-
-    @BeforeEach
-    void setUp() {
-        userPointTable = new UserPointTable();
-        pointHistoryTable = new PointHistoryTable();
-        pointService = new PointService(userPointTable, pointHistoryTable);
-    }
     @Test
     void 최소충전_포인트미만_예외발생() {
         // Given
